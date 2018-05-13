@@ -1,6 +1,6 @@
 ---
 title: 关于我 — Notes for Club Leaders
-language: zh
+language: zh-CN
 embeds: "*.png"
 ...
 
@@ -9,7 +9,7 @@ embeds: "*.png"
 
 #在线资源
 
-__本项目使用Python 3.__ 我们建议使用 [trinket](https://trinket.io/) 在线编写Python代码。这个项目包含如下Trinket:
+__本项目使用Python 3。__ 我们建议使用 [trinket](https://trinket.io/) 在线编写Python代码。这个项目包含如下Trinket:
 
 + [新建 (空白) Python Trinket -- jumpto.cc/python-new](http://jumpto.cc/python-new)
 

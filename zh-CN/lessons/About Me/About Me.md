@@ -1,7 +1,7 @@
 ---
 title: 关于我
 level: Python 1
-language: zh
+language: zh-CN
 stylesheet: python
 embeds: "*.png"
 materials: ["project-resources/new/*.*", "volunteer-resources/about-me-finished/*.*"]
