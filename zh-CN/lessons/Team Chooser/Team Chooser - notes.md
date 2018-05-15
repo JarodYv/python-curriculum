@@ -1,40 +1,40 @@
 ---
-title: Team Chooser — Notes for Club Leaders
-language: en
+title: 选择队员 — 教学笔记
+language: zh-CN
 embeds: "*.png"
 ...
 
-#Introduction:
-In this project, children will learn how to make a program to split a list of players into 2 random teams. This project teaches lists and using files.
+# 简介
+在这个项目中国，孩子们将学习如何编程实现将一列队员随机分成2队。本项目将教授列表和文件的使用。
 
-#Online Resources
+# 在线资源
 
-__This project uses Python 3.__ We recommend using [trinket](https://trinket.io/) to write Python online. This project contains the following Trinkets:
+__本项目使用Python 3。__ 我们建议使用 [trinket](https://trinket.io/) 在线编写Python代码。这个项目包含如下Trinket:
 
-+ [New (blank) Python Trinket -- jumpto.cc/python-new](http://jumpto.cc/python-new)
++ [新建 (空白) Python Trinket -- jumpto.cc/python-new](http://jumpto.cc/python-new)
 
-There is also a trinket containing the completed project:
+下面的trinket包含完整的工程:
 
-+ [‘Team Chooser’ Finished -- trinket.io/python/a699c44ce6](https://trinket.io/python/a699c44ce6)
++ [‘Team Chooser’ 完整版 -- trinket.io/python/a699c44ce6](https://trinket.io/python/a699c44ce6)
 
-#Offline Resources
-This project can be [completed offline](https://www.codeclubprojects.org/en-GB/resources/python-working-offline/) if preferred. You can access the project resources by clicking the 'Project Materials' link for this project. This link contains a 'Project Resources' section, which includes resources that children will need to complete this project offline. Make sure that each child has access to a copy of these resources. This section includes the following files:
+# 离线资源
+如果你愿意，本项目也可以 [离线完成](https://www.codeclubprojects.org/en-GB/resources/python-working-offline/)。你可以点击本项目的'Project Materials'链接访问项目资源。这个链接有一个 'Project Resources' 部分，里面包含孩子们完成该项目所需的离线资源。请确保每个孩子都能获取了这些资源。这部分包含如下文件：
 
 + team/team.py
 
-You can also find a completed version of this project in the 'Volunteer Resources' section, which contains:
+你也可以在 'Volunteer Resources' 部分找到该项目的完成版本，里面包含：
 
 + team-finished/team.py
 
-(All of the resources above are also downloadable as project and volunteer `.zip` files.)
+(上述所有资源都可以以zip压缩包的形式下载。)
 
-#Learning Objectives
-+ Lists;
-+ Loading list data from a file.
+# 学习目标
++ 列表;
++ 从文件加载数据到列表中
 
-#Challenges
-+ "Adding more players" - adding elements to a `players` list;
-+ "Choosing for team B" - creating a new `teamB` list to add random players to;
-+ "Random team names" - creating and using a new `teamNames` list to assign random names to teams;
-+ "Storing team names" - storing team names in a file, and loading them into a `teamNames` variable;
-+ "More teams" - splitting players into 3 teams instead of 2.
+# 挑战
++ "添加更多队员" - 向 `players` 列表添加更多元素;
++ "B队选队员" - 创建一个新的 `teamB` 列表并随机添加队员进去;
++ "随机队名" - 创建一个新的 `teamNames` 列表并随机从列表中选取队名;
++ "保存队名" - 将队名保存到文件，并将他们加载到变量 `teamNames`;
++ "更多队伍" - 将队员分成三个队。
