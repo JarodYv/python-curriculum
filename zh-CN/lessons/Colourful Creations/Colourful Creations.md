@@ -1,7 +1,7 @@
 ---
-title: Colourful Creations
+title: 五彩缤纷
 level: Python 1
-language: en-GB
+language: zh-CN
 stylesheet: python
 embeds: "*.png"
 materials: ["project-resources/new/*.*", "volunteer-resources/colourful-creations-finished/*.*"]
@@ -9,7 +9,7 @@ materials: ["project-resources/new/*.*", "volunteer-resources/colourful-creation
 
 # Introduction { .intro}
 
-In this project you will create a dictionary of colours which maps hard to remember colour codes into friendly names.  
+在这个项目中，你将创建一个颜色字典，将难以记忆的颜色代码映射到易于理解的颜色名。
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/41a99e668b?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -17,124 +17,119 @@ In this project you will create a dictionary of colours which maps hard to remem
   <img src="colourful-finished.png">
 </div>
 
-# Step 1: Using hex colour codes { .activity}
+# 第1步: 使用十六进制颜色代码 { .activity}
 
 ## Activity Checklist { .check}
 
-Python turtle has predefined colours such as 'red' and 'white' but you can also use hex colour codes (you may have seen these in the HTML & CSS course.) 
+Python 中的乌龟绘图预置了一些颜色，例如 'red'(红色) 和 'white'(白色) ，但是你也可以使用十六进制颜色代码 (在HTML和CSS课程中你可能已经见过这些颜色代码。)
 
-+ Open the blank Python template Trinket: <a href="http://jumpto.cc/python-new" target="_blank">jumpto.cc/python-new</a>. If you're reading this online, you can also use the embedded version of this trinket below.
++ 打开一个空白 Python 项目: <a href="http://jumpto.cc/python-new" target="_blank">jumpto.cc/python-new</a>。如果你是在线学习，你也可以使用下面的内嵌版本。
 
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/33e5c3b81b?start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-+ Add the following set up code for using the turtle:
++ 加入下面代码设置乌龟绘图:
 
     ![screenshot](colourful-setup.png)
-    
-    Notice that you used a named colour: 'white'.
-    
-+ Turtle has a list of colour names that you can use, but sometimes you want to choose your own colours. Turtle also allows you to use hex colour codes. 
 
-  Open <a href="http://jumpto.cc/colour-picker" target="_blank">jumpto.cc/colour-picker</a> and choose colour you like. Find it's hex code beginning with a '#', such as '#A7E30E'. 
-  
-+ Copy the hex code, including the hash, by highlighting it and then right-clicking and choosing Copy, or using Ctrl-C. 
-  
-+ Now change the line of code that sets the screen colour to use your colour. For example:
+    注意这里使用了颜色名字: 'white'（白色）。
+
++ 乌龟绘图有一系列颜色可以使用，但有些时候你想要使用自己的颜色。乌龟绘图同样可以使用十六进制颜色代码。
+
+  打开 <a href="http://jumpto.cc/colour-picker" target="_blank">jumpto.cc/colour-picker</a> 并选择你喜欢的颜色。你会发现十六进制颜色代码都是以 '#' 开头，例如'#A7E30E'.
+
++ 选中十六进制颜色代码，包括前面的井号， 点击鼠标右键然后选择复制，或者点击键盘 Ctrl-C，复制颜色代码。
+
++ 然后修改代码，用你选择的颜色填充屏幕。 例如:
 
    ![screenshot](colourful-background.png)
-   
-   You can use right-click and Paste or Ctrl-V to paste your hex code into trinket. 
-  
-+ Choose another hex colour code and use it to create coloured text:
+
+   你可以点击鼠标右键然后粘贴或点击键盘 Ctrl-V 将颜色代码粘贴到trinket中。
+
++ 选择另一个颜色代码并用它来绘制带颜色的文字:
 
    ![screenshot](colourful-write.png)
-   
-   You don't have to use the 'Arial' font, you could try 'Verdana', 'Times' or 'Courier'.
-   
-   '40' is the font size, you can try changing that too.  
-   
-+ Try different colours until you get two that you really like that look good together. 
 
+   你不必非要用 'Arial' 字体，你可以尝试使用 'Verdana', 'Times' 或 'Courier' 等字体。
 
-## Save Your Project {.save}
+   '40' 是字体的大小，你也可以尝试修改这个值。
 
-# Step 2: A Colour Dictionary{ .activity}
++ 尝试不同的颜色，直到你觉得两个颜色放在一起非常美观。
+
+## 保存项目 {.save}
+
+# 第2步: 颜色字典 { .activity}
 
 ## Activity Checklist { .check}
- 
-Using hex colour codes is really flexible but they are hard to remember. 
 
-As you probably already know, a dictionary allows you to look up a word, and see it’s meaning. In Python, a dictionary is even more flexible that that - it allows you to look up a value for any 'key' in the dictionary.
+使用十六进制颜色值非常灵活，但缺点是很难记忆。
 
-Let's create a dictionary to map from human-friendly colour names (keys) to computer-friendly hex codes (values).
+就像你已经了解到的那样，字典可以查找一个词然后看他的意思。Python中的字典字典比现实中的字典更加的灵活 - 你可以通过任意'key'(键)查找对应的'value'(值)。
 
-+ A dictionary is contained in curly brackets. 
+让我们创建一个字典，将人类易读的颜色名(键) 与计算机处理方便的十六进制颜色值(值)关联起来。
 
-  Create an empty dictionary called `colours`:
++ 字典使用花括号记录内容。
+
+  创建一个名为 `colours` 的字典：
 
    ![screenshot](colourful-dict.png)
-   
-+ Choose cool names for your colours and edit the `colours = {} ` line to add entries to the dictionary for them. 
 
-  Here's an example colour dictionary:
++ 为你的颜色起一个酷酷的名字，然后编辑 `colours = {} ` ，将颜色名和颜色值加入到字典。
+
+  例如:
 
    ![screenshot](colourful-colours.png)
-   
-   A colon `:` separates the key (colour name) from the value (hex code.) You need a comma `,` between each key:value pair in the dictionary. 
 
-+ Now you don't need to remember the hex codes, you can just look them up in the dictionary. 
+   冒号 `:` 将键(颜色名)和值(十六进制颜色代码)分开。每组 键:值对 之间用逗号 `,` 分隔。
 
-  Adapt the following code to use your colour names:
-  
++ 现在不不需要记十六进制颜色代码了，你只需要从字典里查找颜色名就能得到这些颜色代码。
+
+  用你的颜色名调整下面的代码：
+
   ![screenshot](colourful-entries.png)
-  
-  The key goes inside square brackets '[]' after the name of the dictionary. 
-  
-+ Now you can update your code to look up colours in the dictionary:
+
+  字典后加方括号'[]'，键放在方括号中。
+
++ 现在你可以更新代码，通过查找字典查找颜色:
 
   ![screenshot](colourful-use.png)
-  
-  
-+ Test your code to make sure your text still displays correctly. 
 
-## Save Your Project {.save}
++ 测试你的程序，确保文字依然能够正确显示。
 
-## Challenge: More colours! {.challenge}
+## 保存项目 {.save}
 
-Can you add more colours to your dictionary and try them out? Use <a href="http://jumpto.cc/colour-picker" target="_blank">jumpto.cc/colour-picker</a> to find more colours. 
+## 挑战: 更多颜色! {.挑战}
 
-Don't forget to give your colours awesome names. 
+你能向字典中加入更多的颜色并查找使用它们吗？ 用 <a href="http://jumpto.cc/colour-picker" target="_blank">jumpto.cc/colour-picker</a> 寻找更多颜色。
 
-Here's some example code to remind you how to use the turtle:
+不要忘了给你的颜色起一个牛逼的名字。
+
+下面的例子向你演示如何使用乌龟绘图：
 
 ![screenshot](colourful-challenge1.png)
 
+## 保存项目 {.save}
 
-## Save Your Project {.save}
+## 挑战: 创建海报
 
-## Challenge: Create a poster
+设计师通常会将一个特定主题的配色创建成颜色板，比如沙漠或太空。
 
-Designers often create a 'palette' of colours that work well together for a particular theme such as desert or space. 
+你能新建一个Python工程并用字典创建某个主题颜色板吗？你可以选择秋天、森林、海洋、圣诞、冰淇淋、你钟爱的球队颜色或任何你喜欢的主题。
 
-Can you create a new Python project that uses a dictionary for a themed colour palette. You could choose autumn, forest, sea, Christmas, ice cream, the colours of your favourite sports team or an idea of your own. 
+用你的主题颜色版字典创建一张海报。
 
-Create a poster using your colour palette dictionary.
+你可以使用其他你直到的乌龟绘图屏幕命令，例如 `forward`, `right`, `left`, `penup` 和 `pendown` 等。
 
-You can also use other turtle commands that you know such as `forward`, `right`, `left`, `penup` and `pendown`. 
+也许你可以为你的海报加上边框?
 
-Maybe you could add a border to your poster?
+其他有用的乌龟绘图命令如下:
 
-Other useful turtle commands:
++ `circle(50)` 画一个半径50的圆。
++ `dot(100)` 画一个直径100的实心圆（点）。
 
-+ `circle(50)` draws a circle outline with radius 50.
-+ `dot(100)` draws a filled in circle with diameter 100. 
-  
-Here's an example:
+下面是一个例子:
 
 ![screenshot](colourful-finished.png)
 
-## Save Your Project {.save}
-
-
+## 保存项目 {.save}
