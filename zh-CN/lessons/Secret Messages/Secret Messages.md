@@ -1,44 +1,44 @@
 ---
-title: Secret Messages
+title: 加密信息
 level: Python 1
-language: en-GB
+language: zh-CN
 stylesheet: python
 embeds: "*.png"
 materials: ["project-resources/new/*.*", "volunteer-resources/secret-messages-finished/*.*", "volunteer-resources/friendship-calculator-finished/*.*"]
 ...
 
-#Introduction:  { .intro}
-In this project, you'll learn how to make your own encryption program, to send and receive secret messages with a friend.
-
+# 简介  { .intro}
+在这个项目中，你将学习如何开发你自己的加密程序，跟朋友之间发送和接收加密信息。
+ 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/402256078c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
   <img src="messages-finished.png">
 </div>
 
-#Step 1: The Caesar cipher { .activity}
+# 第1步: 凯撒加密 { .activity}
 
-A cipher is a type of secret code, where you swap the letters around so that no-one can read your message.
+加密是一种秘密代码，价格字符转换为秘文使他人无法阅读。
 
-You'll be using one of the oldest and most famous ciphers, the __Caesar cipher__, which is named after Julius Caesar.
+你将使用最古老也是最流行的加密方法， __凯撒加密__，这是以 Julius Caesar 的名字命名的加密方法。
 
-Before we start coding, let's try using the Caesar cipher to hide a word.
+在我们开始编码前，先让我们试着用凯撒加密来加密一个词。
 
 ## Activity Checklist { .check}
 
-+ Hiding a word is called __encryption__.
++ 隐藏词语叫做 __加密__.
 
-	Let's start by encrypting the letter 'a'. To do this, we can draw the alphabet in a circle, like this:
+	让我们先来加密字母'a'。要想加密字母'a'，我们可以将字母表画成一个圈，如下图：
 
 	![screenshot](messages-wheel.png)
 
-+ To make a secret encrypted letter from a normal one, you need to have a secret key. Let's use the number 3 as the key (but you can use any number you like).
++ 从正常文本加密的得到秘文，需要一个密钥。让我们用数字3作为密钥（其实你可以用任何你喜欢的数字）。
 
-	To __encrypt__ the letter 'a', you just move 3 letters clockwise, which will give you the letter 'd':
+	要 __加密__ 字母'a'，你只需要顺时针移动3了字母，你会得到字母'd'：
 
 	![screenshot](messages-wheel-eg.png)
 
-+ You can use what you've learnt to encrypt an entire word. For example, 'hello' encrypted is 'khoor'. Try it yourself.
++ 你可以使用你刚刚学到的方法加密整个单词。例如'hello'加密后变为'khoor'。你自己试一下：
 
 	+ h + 3 = __k__
 	+ e + 3 = __h__
@@ -54,190 +54,193 @@ Before we start coding, let's try using the Caesar cipher to hide a word.
 	+ o - 3 = __l__
 	+ r - 3 = __o__	
 
-## Challenge: Use a Caesar cipher { .challenge}
-Can you send a secret word to a friend? You'll both need to agree on a secret key before you start.
+## 挑战: 使用凯撒加密 { .challenge}
 
-You could even send entire sentences to each other!
+你能给朋友发一个加密单词吗？在发送前你们两人必须先协商一个密钥。
 
-#Step 2: Encrypting letters { .activity}
+你们甚至可以彼此发送整段加密句子！
 
-Let's write a Python program to encrypt a single character. 
+# 第2步: 加密字母 { .activity}
+
+让我们写一个Python程序加密单个字母。
 
 ## Activity Checklist { .check}
 
-+ Open the blank Python template Trinket: <a href="http://jumpto.cc/python-new" target="_blank">jumpto.cc/python-new</a>. If you're reading this online, you can also use the embedded version of this trinket below.
++ 打开一个空白Python项目: <a href="http://jumpto.cc/python-new" target="_blank">jumpto.cc/python-new</a>. 如果你是在线学习，也可以用下面的内嵌版本。
 
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/33e5c3b81b?start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-+ Instead of drawing the alphabet in a circle, let's write it out as an `alphabet` variable.
++ 我们用 `alphabet` 变量取代将字母表画成圆圈。
 
 	![screenshot](messages-alphabet.png)
 
-+ Each letter of the alphabet has a position, starting at position 0. So the letter 'a' is at position 0 of the alphabet, and 'c' is at position 2.
++ 字母表里的每一个字母都有一个位置，起始位置为0。所以字母'a'在字母表的第0位，字母'c'在字母表的第2位。
 
 	![screenshot](messages-array.png)
 
-+ You can get a letter from your `alphabet` variable by writing the position in square brackets.
++ 你可以通过在`alphabet`变量后加方括号并将位置写入方括号内来从字母表中获取字母。
 
 	![screenshot](messages-alphabet-array.png)
 
-	You can delete the `print` ststements once you've tried this out.
+	当你尝试过后可以将 `print` 语句删除。
 
-+ Next, you'll need to store the secret `key` in a variable.
++ 接下来，你需要将密钥存入 `key` 变量。
 
 	![screenshot](messages-key.png)	
 
-+ Next, ask the user for a single letter (called a `character`) to encrypt.
++ 然后让用户输入一个字母 (存入 `character` 变量) 来加密。
 
 	![screenshot](messages-character.png)
 
-+ Find the `position` of the `character`.
++ 找到字母 `character` 在字母表的位置 `position`。
 
 	![screenshot](messages-position.png)
 
-+ You can test the stored `position` by printing it. For example, that character 'e' is at position 4 in the alphabet.
++ 你可打印出 `position` 的值来测试。例如，字母 'e' 在字母表的第4位。
 
 	![screenshot](messages-position-test.png)
 
-+ To encrypt the `character`, you should add the `key` to the `position`.
++ 要加密用户输入字母 `character`, 你需要将密钥 `key` 加到位置 `position` 上。
 
 	![screenshot](messages-newposition.png)
 
-+ Test out your new code. As your `key` is 3, it should add 3 to the `position` and store it in your `newPosition` variable. 
++ 测试一下你的新代码。假设密钥 `key` 为 3，那么 `position` 会加3并保存到`newPosition` 变量。
 
-	For example, letter 'e' is at position 4. To encrypt, you add the `key` (3), giving 7.
+	例如，字母 'e' 的位置位4。加密后，加上了密钥 `key` (3)，变成了7。
 
 	![screenshot](messages-newposition-test.png)
 
-+ What happens when you try and encrypt the letter 'y'?
++ 当你尝试加密字母'y'时会发生什么?
 
 	![screenshot](messages-modulus-bug.png)
 
-	Notice how the `newPosition` is 27, and there aren't 27 letters in the alphabet!
+	此时 `newPosition` 为 27，然而字母表里没有27个字母！
 
-+ You can use a `%` to tell the new position to go back to position 0 once it gets to position 26. 
++ 你可以使用 `%` 告诉新的位置一旦位置达到26就回到位置0.
 
 	![screenshot](messages-modulus.png)
 
-+ Finally, you want to print the letter at the new position.
++ 最后，你需要打印出新位置上的字母。
 
-	For example, adding the key to the letter 'e' gives 7, and the letter at position 7 of the alphabet is 'h'.
+	例如，将密钥加到字母 'e' 后得到新位置为7，字母表里位置7对应的字母为 'h'。
 
 	![screenshot](messages-newcharacter.png)
 
-+ Try out your code. You can also remove some of your print statements, just printing the new character at the end.
++ 测试你的代码。你可以将其他打印语句去掉，只在最后打印新字母。
 
 	![screenshot](messages-enc-test.png)
 
-## Save Your Project {.save}
+## 保存项目 {.save}
 
-## Challenge: Variable keys { .challenge}
-Modify your program, so that the user can enter their own key to use. You'll need to get the user's input, and store it in the `key` variable.
+## 挑战: Variable keys { .challenge}
+修改程序，让用户可以自己输入密钥。你需要获取用户的输入，并将其保存到变量 `key` 。
 
-Remember to use the `int()` function to convert the input to a whole number.
+记住，使用 `int()` 函数将输入转成整数。
 
-You can then use a negative key to decrypt messages!
+你可以可以使用负数作为密钥来加密信息！
 
-## Save Your Project {.save}
+## 保存项目 {.save}
 
-#Step 2: Encrypting entire messages { .activity}
+# 第2步: 加密整段信息 { .activity}
 
-Instead of just encrypting and decrypting messages one character at a time, let's change the program to encrypt entire messages!
+让我们修改程序，让它不仅仅是一次加密解密一个字母，而是加密一段完整信息！
 
 ## Activity Checklist { .check}
 
-+ Firstly, check that your code looks like this:
++ 首先，检查你的代码应该如下面这样：
 
 	![screenshot](messages-character-finished.png)
 
-+ Create a variable to store the new encrypted message.
++ 创建一个变量存储加密后的信息。
 
 	![screenshot](messages-newmessage.png)
 
-+ Change your code to store the user's message and not just one character.
++ 修改代码可以存储用户的信息而不仅仅是一个字母。
 
 	![screenshot](messages-message.png)
 
-+ Add a `for` loop to your code, and indent the rest of the code so that it is repeated for each character in the message.
++ 添加一个 `for` 循环，并将其他代码缩进到循环内，这样信息中的每个字母都会循环执行一次。
 
 	![screenshot](messages-loop.png)
 
-+ Test your code. You should see that each character in the message is encrypted and printed one at a time.
++ 测试代码。你应该看到信息中的每一个字母都被加密并打印出来。
 
 	![screenshot](messages-loop-test.png)
 
-+ Let's add each encrypted character to your `newMessage` variable.
++ 将每一个加密后的字母添加到 `newMessage` 变量。
 
 	![screenshot](messges-message-add-character.png)
 
-+ You can `print` the `newMessage` as it is begin encrypted.
++ 你可以在每次加密后将 `newMessage` 打印出来。
 
 	![screenshot](messages-print-message-characters.png)
 
-+ If you delete the spaces before the `print` statement, the encrypted message will only be displayed once at the end. You can also delete the code for printing the character positions.
++ 输入你删除 `print` 语句前面的空格，加密后的信息只会在循环结束后打印一次。你也可以删除打印字符位置的语句。
 
 	![screenshot](messages-print-message-comment.png)
 
-## Save Your Project {.save}
+## 保存项目 {.save}
 
-#Step 3: Extra characters { .activity}
+# 第3步: 特殊字符 { .activity}
 
-Some characters aren't in the alphabet, which causes an error.
+有些字符不在字母表里，这会导致错误。
 
 ## Activity Checklist { .check}
 
-+ Test out your code with some characters that aren't in the alphabet.
++ 让你的程序加密一条含有非字母表内字符的信息。
 
-	For example, you could use the message `hi there!!`.
+	例如，你可以尝试加密 `hi there!!`.
 
 	![screenshot](messages-extra-characters.png)
 
-	Notice that the space and the `!` characters are all encrypted as the letter 'c'!
+	注意，这条信息里的空格和 `!` 全部加密为了字母 'c'!
 
-+ To fix this, you only want to translate a character if it's in the alphabet. To do this, add an `if` statement to your code, and indent the rest of your code.
++ 要解决这个问题，你只需要加密那些在字母表中的字符即可。要实现这个功能，添加一个 `if` 语句，并将其他代码缩进到if语句内。
 
 	![screenshot](messages-if.png)
 
-+ Test your code with the same message. What happens this time?
++ 同相同的信息测试代码，这次发生了什么？
 
 	![screenshot](messages-if-test.png)
 
-	Now, your code just skips any character if it's not in the alphabet.
+	这次，你的代码直接跳过了那些不在字母表中的字符。
 
-+ It would be better if your code didn't encrypt anything not in the alphabet, but just used the original character.
++ 如果程序能够不加密那些不在字母表中的字符，而是将其原模原样显示出来就好了。
 
-	Add an `else` statement to your code, which just adds the original character to the encrypted message.
+	添加一个 `else` 语句，将不在字母表中的字符添加到加密信息中。
 
 	![screenshot](messages-else.png)
 
-+ Test your code. You should see that any character in the alphabet is encrypted, but any other characters are left alone!
++ 测试你的代码。这次你会看到字母表中的字母都被加密了，不在字母表中的字符直接显示出来！
 
 	![screenshot](messages-else-test.png)
 
-## Save Your Project {.save}
+## 保存项目 {.save}
 
-## Challenge: Encrypting and decrypting messages { .challenge}
-Encrypt some messages, and give them to a friend along with the secret key. See if they can decrypt them using their program!
+## 挑战: 加密解密信息 { .challenge}
 
-You could also duplicate the project and create a separate program for decrypting messages.
+加密一条信息，连同密钥一起发送给你的朋友。看看他们能不能用他们的程序解密信息！
 
-## Save Your Project {.save}
+你也可以复制一个项目并独立开发一个解密程序。
 
-## Challenge: Friendship calculator { .challenge}
-Write a program to show how compatible 2 people are, by calculating a friendship score.
+## 保存项目 {.save}
+
+## 挑战: 友谊计算器 { .challenge}
+
+编写一个程序通过计算友谊分来显示两个人有多默契。
 
 ![screenshot](messages-friends.png)
 
-The program could loop through each of the characters in the 2 names, and add points to a `score` variable each time certain letters are found.
+这个程序会循环每一个人名字中的字母，将字母位置加到 `score` 变量中。
 
-You should decide on rules for awarding points. For example, you could award points for vowels, or characters that are found in the word "friend":
+你需要指定一个奖励点数规则。例如，你可以奖励元音，或者出现在单词 "friend" 中的字母：
 
 ![screenshot](messages-friends-code.png)
 
-You could also give the user a personalised message, based on their score:
+你也可以根据两人的得分给出个性化的信息：
 
 ![screenshot](messages-best-friends.png)
 
-## Save Your Project {.save}
+## 保存项目 {.save}

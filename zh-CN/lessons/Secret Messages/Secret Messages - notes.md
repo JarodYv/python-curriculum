@@ -1,50 +1,53 @@
 ---
-title: Secret Messages — Notes for Club Leaders
-language: en
+title: 加密信息 — 教学笔记
+language: zh-CN
 embeds: "*.png"
 ...
 
-#Introduction:
-In this project, children will learn how to make an encryption program, to send and receive secret messages with a friend. This project introduces iteration (looping) over a text string.
+# 简介
 
-#Online Resources
+在这个项目中，孩子们将学习如何开发一个加密程序，可以跟朋友发送和接收加密信息。这个项目还将介绍字符串迭代。
 
-__This project uses Python 3.__ We recommend using [trinket](https://trinket.io/) to write Python online. This project contains the following Trinkets:
+# 在线资源
 
-+ [New (blank) Python Trinket -- jumpto.cc/python-new](http://jumpto.cc/python-new)
+__本项目使用Python 3。__ 我们建议使用 [trinket](https://trinket.io/) 在线编写Python代码。这个项目包含如下Trinket:
 
-There is also a trinket containing the finished project:
++ [新建 (空白) Python Trinket -- jumpto.cc/python-new](http://jumpto.cc/python-new)
 
-+ [‘Secret Messages’ Finished -- trinket.io/python/402256078c](https://trinket.io/python/402256078c)
+下面的trinket包含完整的工程:
 
-+ [‘Friendship Calculator’ Finished -- trinket.io/python/2e852cd687](https://trinket.io/python/2e852cd687)
++ [‘加密信息’ 完整版 -- trinket.io/python/402256078c](https://trinket.io/python/402256078c)
 
-#Offline Resources
-This project can be [completed offline](https://www.codeclubprojects.org/en-GB/resources/python-working-offline/) if preferred.
++ [‘友谊计算器’ 完整版 -- trinket.io/python/2e852cd687](https://trinket.io/python/2e852cd687)
 
-You can find the completed project in the 'Volunteer Resources' section, which contains:
+# 离线资源
+
+如果你愿意，本项目可以 [离线完成](https://www.codeclubprojects.org/en-GB/resources/python-working-offline/) 你可以点击本项目的'Project Materials'链接访问项目资源。这个链接有一个 'Project Resources' 部分，里面包含孩子们完成该项目所需的离线资源。请确保每个孩子都能获取了这些资源。这部分包含如下文件：
 
 + messages-finished/messages.py
 + messages-finished/friends.py
 
-(All of the resources above are also downloadable as project and volunteer `.zip` files.)
+(上述所有资源都可以以zip压缩包的形式下载。)
 
-#Learning Objectives
-+ Iteration (looping) over a string variable;
-+ The `find()` method;
-+ The modulus operator (`%`).
+# 学习目标
 
-#Challenges
-+ Use a Caesar cipher - encrypy and decrypt letters and words manually;
-+ Variable keys - allowing the user to input a chosen key;
-+ Encrypting and decrypting messages - encrypting and decrypting whole messages;
-+ Friendship calculator - applying text iteration to a new problem.
++ 迭代 (循环) 字符串变量;
++ `find()` 方法;
++ 取模(`%`)运算符.
 
-#Frequently Asked Questions
-+ When searching using `find()` or `if char in alphabet:`, note that searches are case-sensitive. Children can use:
+# 挑战
+
++ 凯撒加密 - 手动加密解密一个字母或单词;
++ 可变密钥 - 允许用户自己输入密钥;
++ 加密解密信息 - 加密解密完整信息;
++ 友谊计算器 - 应用文本迭代来解决新的问题。
+
+# 常见问题
+
++ 当用 `find()` 搜索或 `if char in alphabet:` 时，注意搜索是大小写敏感的。 可以用下面代码:
 
 	```python
 	message = input("Please enter a message to encrypt: ").lower()
 	```
 
-	to make the input lower case before searching.
+	在搜索前将输入变成小写。
